@@ -1,0 +1,42 @@
+
+<div class="landing-bg">
+    <div class="container-fluid ">
+        <div class="row"> 
+            <div class="col-12">
+                <div class="d-flex justify-content-center vertical-center">  
+                    <div class="card col-12 col-md-4 ">
+                        <div class="text-center bg-danger text-white login-card-header">
+                            <h4>
+                                Sign In
+                            </h4>
+                        </div>                       
+                        <form [formGroup] = "loginForm">
+                            <div>
+                                <mat-form-field appearance="outline"  class="full-width">                                                                        
+                                    <mat-icon matSuffix>account_circle</mat-icon>
+                                    <mat-label> Username</mat-label>
+                                    <input matInput formControlName = 'username' placeholder=" Enter username" autocomplete="off" type="text">
+                                </mat-form-field>
+
+                                <mat-form-field  appearance="outline" class="full-width">                                   
+                                    <mat-icon matSuffix *ngIf="x.type === 'password'"> lock</mat-icon>                                  
+                                    <mat-icon matSuffix *ngIf="x.type === 'text'"> visibility_off</mat-icon>
+                                    <mat-label>Password</mat-label>
+                                    <input #x type="password" formControlName = 'password' matInput placeholder="Enter password">
+                                </mat-form-field>
+                                <mat-slide-toggle color="primary" (click)="x.type=x.type=='password'?'text':'password'">Show password</mat-slide-toggle>                               
+                            </div>
+                            <div class="float-right mb-3">
+                                <button class="btn btn-login btn-danger btn-full" (click)="signIn()">                                   
+                                    <span class="mr-2"> sign in </span>
+                                    <i class="fas fa-sign-in-alt"></i>
+                                </button>      
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </div>
+    </div>
+    

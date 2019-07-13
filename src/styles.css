@@ -1,1 +1,61 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+html { height: 100%; }
+body {  
+    margin: 0;   
+    width:100vw;
+    height:auto;
+    overflow:hidden;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    }
+
+.container-fluid {
+    padding: 15px !important;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+    text-align: center;
+}
+
+.elavation-3{
+    z-index: 1000;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+}
+
+button:focus, button:active {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.card{
+    box-shadow: 0 2px 1px -1px rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 3px 0 rgba(0,0,0,.12);
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    border-radius: 2px;
+}
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+    display: flex;
+    align-items: center;
+  }
+
+.mat-form-field-label {
+    color: #C82333 !important;
+}
+
+.mat-form-field-underline {
+  border: 1px solid gray  !important;
+} 
+
+.full-width{
+      width: 100%;
+}
+
+.login-btn-color{
+    background: #E34716;
+}

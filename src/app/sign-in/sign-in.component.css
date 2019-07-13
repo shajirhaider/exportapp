@@ -1,0 +1,54 @@
+
+.landing-bg{
+    background:url("../../assets/img/app-bg.PNG") center no-repeat;
+    height: 100%;
+    width: auto;
+    background-size: cover;
+    overflow:hidden
+  }  
+  
+    .top-right {
+      margin-top: 5vh;
+      /* padding-right: 40px; */
+    }
+    .logo-tag .logo-desciption{
+      width: 350px;
+      font-size: 13px;
+      font-weight: normal;
+      color: #4A5E69;
+    }
+    .logo{
+      width: 250px;
+      height: 70px;
+    }
+    .logo-tag{
+      font-size: 30px;
+      font-weight: bold;
+      color: #4A5E69;
+    }
+    .logo-tag br{
+      margin: 1px !important;
+    }
+  
+    .btn-custome{
+      width: 120px;
+      border-radius: 500px;
+    }
+    @media only screen and (max-width: 600px) {
+      .btn-full {
+        width: 100%;
+        margin-bottom: 8px;
+      }
+    }
+
+    .login-card-header{
+        margin-left: -16px;
+        margin-right: -16px;
+        padding: 13px;
+        margin-bottom: 15px;
+    }
+    
+.btn-login{
+    border-radius: 2px !important;
+    width: 120px;
+}

@@ -1,0 +1,38 @@
+
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar class="example-toolbar header-bg elavation-3">
+      <mat-toolbar-row>
+        <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+        <h1 class="example-app-name">My App</h1>
+        
+        <span class="example-spacer"></span>
+        <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Item 1</button>
+          <button mat-menu-item>Item 2</button>
+        </mat-menu>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="example-sidenav-container elavation-3"
+                           [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+      <mat-sidenav #snav class="elavation-3"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" 
+                   [opened]="screenWidth > 840" [mode]="(screenWidth > 840) ? 'side' : 'over'"
+                    >
+        <mat-nav-list  style= "width:180px;">
+          <a mat-list-item routerLink="." *ngFor="let nav of navItem">              
+            <span>
+              <mat-icon aria-hidden="false" aria-label="home icon">{{nav.icon}}</mat-icon>
+            </span>
+            <span>{{nav.text}}</span>    
+          </a>
+        </mat-nav-list>
+      </mat-sidenav>
+  
+      <mat-sidenav-content>
+        <div class="container-fluid">
+          <router-outlet></router-outlet>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
