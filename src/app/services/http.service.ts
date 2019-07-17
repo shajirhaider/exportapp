@@ -9,7 +9,8 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class HttpService {
   constructor(private http: HttpClient) {}
-  baseUrl = 'https://aurora-exportapp.herokuapp.com/';
+  baseUrl = 'https://aurora-exportapp.herokuapp.com';
+
   post(url: string, data: any): Observable<any> {
     const headers = new Headers({'Content-Type': 'application/json'});  
     try {
@@ -18,6 +19,7 @@ export class HttpService {
         return throwError(err.message);
     }
   }
+  
   get(url: string): Observable<any> {
     const headers = new Headers({'Content-Type': 'application/json'});  
     try {

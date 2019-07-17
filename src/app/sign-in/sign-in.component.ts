@@ -48,12 +48,13 @@ export class SignInComponent implements OnInit {
     //     (error) => console.log(error)
     //   );
 
-        this.httpService.get(this.url.GetUser)
-          .subscribe(
-            (response) =>{   
-              console.log(response)
-            },
-            (error) => console.log(error)
-          );
+        // this.httpService.get(this.url.GetUser)
+        //   .subscribe(
+        //     (response) =>{   
+        //       console.log(response)
+        //     },
+        //     (error) => console.log(error)
+        //   );
+        this.router.navigate(['/admin/dashboard'])
   }
 }

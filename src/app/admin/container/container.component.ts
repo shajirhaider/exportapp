@@ -1,3 +1,4 @@
+
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 
@@ -8,22 +9,13 @@ import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 })
 export class ContainerComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
-screenWidth: number;
-
-  fillerNav = Array.from({length: 6}, (_, i) => `Nav Item ${i + 1}`);
+  screenWidth: number;
 
   navItem = [
-    {text:"Companies", url:"/companies", icon:"add"},
+    {text:"Companies", url:"/admin/list", icon:"add"},
     {text:"Merchant", url:"/companies", icon:"add"},
-    {text:"Companies", url:"/companies", icon:"add"}
+    {text:"Clients", url:"/companies", icon:"add"}
   ]
-
-  fillerContent = Array.from({length: 20}, () =>
-      `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-       labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-       laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-       voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`);
 
   private _mobileQueryListener: () => void;
 
@@ -42,4 +34,6 @@ screenWidth: number;
   ngOnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
+
+
 }

@@ -52,3 +52,11 @@
     border-radius: 2px !important;
     width: 120px;
 }
+
+.mat-form-field-label {
+  color: #C82333 !important;
+}
+
+.mat-form-field-underline {
+border: 1px solid gray  !important;
+} 
